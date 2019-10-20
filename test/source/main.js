@@ -41,5 +41,33 @@ describe('ISO 15924', () => {
 
 			next();
 		});
+
+		it('does not factory unknown scripts', (next) => {
+			const { code, numeric } = factory;
+
+			expect(() => code('Unkn')).to.throw(
+				/^Unknown ISO15924 code "Unkn"$/
+			);
+			expect(() => code('Unk')).to.throw(/^Unknown ISO15924 code "Unk"$/);
+			expect(() => code('Un')).to.throw(/^Unknown ISO15924 code "Un"$/);
+			expect(() => code('U')).to.throw(/^Unknown ISO15924 code "U"$/);
+			expect(() => code('unkn')).to.throw(
+				/^Unknown ISO15924 code "Unkn"$/
+			);
+			expect(() => code('unk')).to.throw(/^Unknown ISO15924 code "Unk"$/);
+			expect(() => code('un')).to.throw(/^Unknown ISO15924 code "Un"$/);
+			expect(() => code('u')).to.throw(/^Unknown ISO15924 code "U"$/);
+
+			expect(() => numeric('1234')).to.throw(
+				/^Unknown ISO15924 code "1234"$/
+			);
+			expect(() => numeric('12')).to.throw(
+				/^Unknown ISO15924 code "012"$/
+			);
+			expect(() => numeric(12)).to.throw(/^Unknown ISO15924 code "012"$/);
+			expect(() => numeric(1)).to.throw(/^Unknown ISO15924 code "001"$/);
+
+			next();
+		});
 	});
 });

@@ -258,6 +258,16 @@ const collection = {
 
 
 /**
+ * Handle unknown normalized codes
+ *
+ * @param {string} normalized
+ * @throws Error
+ */
+function unknown(normalized) {
+	throw new Error(`Unknown ISO15924 code "${normalized}"`);
+}
+
+/**
  * Factory to create singleton instances based on the ISO15924 code
  *
  * @param {*} code
@@ -265,10 +275,15 @@ const collection = {
  */
 function byCode(code) {
 	const string = String(code);
-	const normal = string[0].toUpperCase() + string.slice(1,4).toLowerCase();
+	const normal = string[0].toUpperCase() + string.slice(1, 4).toLowerCase();
 
 	if (!cache.has(normal)) {
+		if (!(normal in collection)) {
+			unknown(normal);
+		}
+
 		const { [normal]: numeric } = collection;
+
 		cache.set(code, new ISO15924(normal, numeric));
 	}
 
@@ -277,18 +292,25 @@ function byCode(code) {
 
 /**
  * Factory to create singleton instanced based on the ISO15924 numeric code
- * 
+ *
  * @param {string|number} code
  * @return {ISO15924} instance
  */
-function byNumeric (numeric) {
-	const normal = `000${numeric}`.slice(-3);
-	const [code] = Object.keys(collection).filter((key) => collection[key] === normal);
+function byNumeric(numeric = '') {
+	const string = String(numeric);
+	const normal = `000${numeric}`.slice(-Math.max(3, string.length));
+	const [code] = Object.keys(collection).filter(
+		(key) => collection[key] === normal
+	);
+
+	if (!code) {
+		unknown(normal);
+	}
 
 	return byCode(code);
 }
 
-/** 
+/**
  * The exported function, with additional properties
  */
 function factory(value) {
