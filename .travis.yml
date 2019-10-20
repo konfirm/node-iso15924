@@ -1,8 +1,22 @@
 language: node_js
 node_js:
-    - '7'
-    - '8'
-    - '9'
-    - '10'
-    - '11'
-    - '12'
+- '7'
+- '8'
+- '9'
+- '10'
+- '11'
+- '12'
+
+jobs:
+  include:
+  - stage: npm release
+    if: tag IS present
+    node_js: 12
+    deploy:
+      provider: npm
+      email: rogier+npm@konfirm.eu
+      on:
+        branch: master
+        tags: true
+      api_key:
+        secure: m6LLxXqsAz89w/pp9CqmCxd7bQvxbhp5eT/TIn1IJHaP35P0aFd3T6nfOEf2VlC0eADSYVJcsbT3uA+exRVznlR1Fu2XjFsRBBwD47w4LQXFcdFieDVP0EuzqWKPRcJEy5m3pXsYoDVjqdgH8tP/jQp+xpZZ74ENxMKqIKz6kZJ5qeCCz1jeNqQJYkorn1k/4puGG+JAqxmWystW3bnc4pSx/COjYqybXDmX0tiUNzsFI2+qvrvqZwD+vkcmreaNcGOjUdo3ZpLavUJNA5SwXBIqAZYhjDeWdguUJumTfLG1x5z8PhBjl6SWyGA/l2SVXsxw0MWqdPK3YS+mC1UENOp+jHyAzuiBfxHBheZ0Llohe/H3I1++NjrqOEjSIYGjj4PScVsl7KOHMoTeV6PVhaF7mCDNV4JUPMKExN3fZ11oaBHpH6dwbQf6FBXhR6azt6050iAEGyn/hFwCV8WVL08vKszm6MdV0JjjIgTYgRlW9tGff3yZSL+SseLqr0bPScaGOsBZZ03PbTf/k+RPuiGtPWFZtNszB5oYLZvdLXDXShlTEb35tI8nUvOFr0N3k53VSULw1014FUik77veIxQ9lMg9UrUfkg++8fH8QA/jJu4gTkSBNku+e/94OJagWip4vGoVxYIrYH1ktrlano7sm4yhqUNLtKmSH7sBp7w=
