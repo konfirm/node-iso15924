@@ -4,7 +4,7 @@ const factory = source('main');
 const ISO15924 = source('ValueObject/ISO15924');
 
 describe('ISO 15924', () => {
-	describe('Kore - Korean (alias for Hangul + Han)', () => {
+	describe('Kore - Korean', () => {
 		const kore = factory('Kore');
 
 		it('instances are singletons', (next) => {

@@ -4,7 +4,7 @@ const factory = source('main');
 const ISO15924 = source('ValueObject/ISO15924');
 
 describe('ISO 15924', () => {
-	describe('Hrkt - Japanese syllabaries (alias for Hiragana + Katakana)', () => {
+	describe('Hrkt - Japanese syllabaries', () => {
 		const hrkt = factory('Hrkt');
 
 		it('instances are singletons', (next) => {

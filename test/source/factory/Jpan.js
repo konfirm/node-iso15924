@@ -4,7 +4,7 @@ const factory = source('main');
 const ISO15924 = source('ValueObject/ISO15924');
 
 describe('ISO 15924', () => {
-	describe('Jpan - Japanese (alias for Han + Hiragana + Katakana)', () => {
+	describe('Jpan - Japanese', () => {
 		const jpan = factory('Jpan');
 
 		it('instances are singletons', (next) => {

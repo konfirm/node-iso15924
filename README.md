@@ -125,7 +125,7 @@ cyrl.numeric; // '220'
  `Grek` | `200`    | Greek
  `Gujr` | `320`    | Gujarati
  `Guru` | `310`    | Gurmukhi
- `Hanb` | `503`    | Han with Bopomofo (alias for Han + Bopomofo)
+ `Hanb` | `503`    | Han with Bopomofo
  `Hang` | `286`    | Hangul (Hangŭl, Hangeul)
  `Hani` | `500`    | Han (Hanzi, Kanji, Hanja)
  `Hano` | `371`    | Hanunoo (Hanunóo)
@@ -137,13 +137,13 @@ cyrl.numeric; // '220'
  `Hluw` | `080`    | Anatolian Hieroglyphs (Luwian Hieroglyphs, Hittite Hieroglyphs)
  `Hmng` | `450`    | Pahawh Hmong
  `Hmnp` | `451`    | Nyiakeng Puachue Hmong
- `Hrkt` | `412`    | Japanese syllabaries (alias for Hiragana + Katakana)
+ `Hrkt` | `412`    | Japanese syllabaries
  `Hung` | `176`    | Old Hungarian (Hungarian Runic)
  `Inds` | `610`    | Indus (Harappan)
  `Ital` | `210`    | Old Italic (Etruscan, Oscan, etc.)
- `Jamo` | `284`    | Jamo (alias for Jamo subset of Hangul)
+ `Jamo` | `284`    | Jamo
  `Java` | `361`    | Javanese
- `Jpan` | `413`    | Japanese (alias for Han + Hiragana + Katakana)
+ `Jpan` | `413`    | Japanese
  `Jurc` | `510`    | Jurchen
  `Kali` | `357`    | Kayah Li
  `Kana` | `411`    | Katakana
@@ -153,7 +153,7 @@ cyrl.numeric; // '220'
  `Kitl` | `505`    | Khitan large script
  `Kits` | `288`    | Khitan small script
  `Knda` | `345`    | Kannada
- `Kore` | `287`    | Korean (alias for Hangul + Han)
+ `Kore` | `287`    | Korean
  `Kpel` | `436`    | Kpelle
  `Kthi` | `317`    | Kaithi
  `Lana` | `351`    | Tai Tham (Lanna)
