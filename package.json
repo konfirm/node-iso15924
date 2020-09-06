@@ -1,40 +1,43 @@
 {
-	"name": "@konfirm/iso15924",
-	"version": "1.0.0",
-	"description": "Implementation of ISO 15924:2004, codes for presentations of names of scripts",
-	"main": "source/main.js",
-	"directories": {
-		"test": "test"
-	},
-	"scripts": {
-		"test": "./node_modules/.bin/lab -vcl"
-	},
-	"repository": {
-		"type": "git",
-		"url": "https://github.com/konfirm/node-iso15924.git"
-	},
-	"bugs": {
-		"url": "https://github.com/konfirm/node-iso15924/issues"
-	},
-	"keywords": [
-		"iso",
-		"15924",
-		"script",
-		"i18n",
-		"l10n",
-		"g11n",
-		"bcp47"
-	],
-	"files": [
-		"source/**/*.js"
-	],
-	"author": "Rogier Spieker <rogier+npm@konfirm.eu>",
-	"license": "MIT",
-	"devDependencies": {
-		"@konfirm/labrat": "^2.0.0",
-		"eslint": "^6.2.2",
-		"eslint-config-prettier": "^6.1.0",
-		"eslint-plugin-prettier": "^3.1.0",
-		"prettier": "^1.18.2"
-	}
+  "name": "@konfirm/iso15924",
+  "version": "1.0.0",
+  "description": "Implementation of ISO 15924:2004, codes for presentations of names of scripts",
+  "main": "source/main.js",
+  "directories": {
+    "test": "test"
+  },
+  "scripts": {
+    "test": "./node_modules/.bin/lab -vcl"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/konfirm/node-iso15924.git"
+  },
+  "bugs": {
+    "url": "https://github.com/konfirm/node-iso15924/issues"
+  },
+  "keywords": [
+    "iso",
+    "15924",
+    "script",
+    "i18n",
+    "l10n",
+    "g11n",
+    "bcp47"
+  ],
+  "files": [
+    "source/**/*.js"
+  ],
+  "author": "Rogier Spieker <rogier+npm@konfirm.eu>",
+  "license": "MIT",
+  "engines": {
+    "node": ">=8"
+  },
+  "devDependencies": {
+    "@konfirm/labrat": "^2.0.0",
+    "eslint": "^6.2.2",
+    "eslint-config-prettier": "^6.1.0",
+    "eslint-plugin-prettier": "^3.1.0",
+    "prettier": "^1.18.2"
+  }
 }
